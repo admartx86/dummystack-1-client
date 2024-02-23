@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Adam Martinez" />
+    <link rel="stylesheet" type="text/css" href="./main.css" />
+    <title>dummystack-1</title>
+  </head>
+  <body>
+    <form onSubmit="event.preventDefault(); makeGetRequest();">
+      <label for="get">GET</label>
+      <button id="get" type="submit">GET</button>
+    </form>
+    <form onSubmit="event.preventDefault(); makePostRequest();">
+      <label for="post-title">Title:</label>
+      <input id="post-title" type="text" required /><br />
+      <label for="post-article">Article:</label>
+      <textarea id="post-article" required></textarea><br />
+      <button type="submit">POST</button>
+    </form>
+
+    <form onSubmit="event.preventDefault(); makePutRequest();">
+      <label for="put-id">Id:</label>
+      <input id="put-id" type="text" required /><br />
+      <label for="put-title">Title:</label>
+      <input id="put-title" type="text" required /><br />
+      <label for="put-article">Article:</label>
+      <textarea id="put-article" required></textarea><br />
+      <button type="submit">PUT</button>
+    </form>
+    <form onSubmit="event.preventDefault(); makeDeleteRequest();">
+      <label for="delete-id">Id:</label>
+      <input id="delete-id" type="text" /><br />
+      <label for="delete">DELETE</label>
+      <button id="delete" type="submit">DELETE</button>
+    </form>
+    <div id="result"></div>
+    <script src="./index.ts"></script>
+  </body>
+</html>
